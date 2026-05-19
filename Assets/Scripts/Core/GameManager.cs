@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject PausePanel;
 
     public GameState currentState;
 
@@ -24,9 +25,11 @@ public class GameManager : MonoBehaviour
             if (currentState == GameState.Playing)
             {
                 PauseGame();
+                PausePanel.SetActive(true);
             }
             else if  (currentState == GameState.Paused)
             {
+                PausePanel.SetActive(false);
                 ResumeGame();
             }
         }

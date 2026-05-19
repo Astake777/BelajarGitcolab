@@ -24,4 +24,10 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void ResumeToGame()
+    {
+       
+        SceneManager.LoadScene("Game");
+    }
 }
